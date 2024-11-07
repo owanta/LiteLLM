@@ -1,9 +1,13 @@
 model_list:
   - model_name: fake-openai-endpoint
     litellm_params:
-      model: openai/fake
-      api_key: os.environ/OPENAI_API_KEY
-      api_base: https://exampleopenaiendpoint-production.up.railway.app/
+      model: fake-openai/gpt-4o-mini
+      api_key: os.environ/Fake_API_KEY
+      api_base: os.environ/Fake_API_BASE
+    litellm_params:
+      model: fake-openai/gpt-4o
+      api_key: os.environ/Fake_API_KEY
+      api_base: os.environ/Fake_API_BASE
 
 litellm_settings:
   callbacks: ["gcs_bucket"]
